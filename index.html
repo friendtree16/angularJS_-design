@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="main.js"></script>
+<script src="my.facade.js"></script>
+<script src="my.model.js"></script>
+<script src="my.factory.js"></script>
+<script src="my.controller.js"></script>
+</head>
+<body>
+ <div>
+  <div ng-controller="MyController" ng-init="init()">
+   {{viewModel.getMessage()}}
+  </div>
+ </div>
+</body>
+</html>
