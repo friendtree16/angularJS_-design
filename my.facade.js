@@ -14,7 +14,9 @@ var MyFacade = function($http) {
         //     }
         //     // エラー処理
         //   });
-        resultSuccess("Hello World!")
+        var returnModel = {};
+        returnModel.data = {"message":"Hello World!"};
+        resultSuccess(returnModel);
     }
 }
 MyFacade.$inject = ['$http'];

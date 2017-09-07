@@ -1,18 +1,18 @@
 var MyModel = function(MyFacade) {
     this.init = function(param) {
         localParam = param;
-        createParam(localParam);
+        apiRequest(localParam);
         return this;
     }
 
-    var createParam = function(param) {
+    var apiRequest = function(param) {
         MyFacade.hogehgeApi(param,function(response) {
-            message = response;
+            localResponse = response;
         });
     }
 
     this.getMessage = function() {
-        return message;
+        return localResponse.data.message;
     }
 }
 MyModel.$inject = ['MyFacade'];
